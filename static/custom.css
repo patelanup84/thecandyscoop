@@ -1,0 +1,17 @@
+.hero {
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-text {
+        position: static;
+        text-align: left;
+    }
+}

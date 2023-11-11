@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>{{ category_name }}</h2>
+    <p>This is a page for {{ category_name }} category.</p>
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-md-4">
+                <img src="{{ post.hero_image }}" alt="{{ post.title }}">
+                <h3><a href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h3>
+                <p>{{ post.snippet }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

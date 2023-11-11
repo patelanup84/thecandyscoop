@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>About Us</h2>
+    <p>This is what our site is all about.</p>
+    <div class="row">
+        {% for member in team_members %}
+            <div class="col-md-4">
+                <img src="{{ member.photo_url }}" alt="{{ member.name }}">
+                <h3>{{ member.name }}</h3>
+                <p>{{ member.bio }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

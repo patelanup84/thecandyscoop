@@ -15,3 +15,8 @@
         text-align: left;
     }
 }
+
+header {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #f78da7;
+}

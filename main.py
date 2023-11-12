@@ -30,7 +30,7 @@ def get_team_members():
 def home():
     posts = get_posts()
     recent_posts = get_recent_posts()
-    return render_template('index.html', posts=posts, recent_posts=recent_posts, hero_image='https://fakeimg.pl/1920x800', hero_text='Welcome to MySite!')
+    return render_template('index.html', posts=posts, recent_posts=recent_posts, hero_image="{{ url_for('static', filename='images/hero_home.jpg') }}", hero_text='CANDY NEWS & REVIEWS')
 
 @app.route('/about')
 def about():
